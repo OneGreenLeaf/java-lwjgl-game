@@ -1,0 +1,1 @@
+What is the diff when you write GLFW.and(some method) and write some method without GLFW?
