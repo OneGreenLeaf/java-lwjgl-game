@@ -1,5 +1,4 @@
 package main;
-
 import main.gerta.Window;
 
 public class Main {
