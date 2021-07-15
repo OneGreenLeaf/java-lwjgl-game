@@ -12,6 +12,5 @@ public class LevelScene extends Scene {
 
     @Override
     public void update(float dt) {
-        System.out.println("" + (1 / dt) + "FPS for LevelScene");
     }
 }
