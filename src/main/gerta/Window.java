@@ -32,7 +32,7 @@ public class Window {
     private Window() {
         this.width = 800;
         this.height = 600;
-        this.title = "Window";
+        this.title = "Window" ;
         r = 1;
         b = 1;
         g = 1;
@@ -62,6 +62,10 @@ public class Window {
             Window.window = new Window();
         }
         return Window.window;
+    }
+
+    public  static Scene getScene(){
+        return get().currentScene;
     }
 
     public void run () {

@@ -35,9 +35,7 @@ public class Texture {
         ByteBuffer image = stbi_load(filepath, width, height, channels, 0);
 
         if (image != null) {
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width.get(0), height.get(0),
-                    0, GL_RGB, GL_UNSIGNED_BYTE, image);
-            /*if (channels.get(0) == 3) {
+            if (channels.get(0) == 3) {
                 glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width.get(0), height.get(0),
                         0, GL_RGB, GL_UNSIGNED_BYTE, image);
             } else if (channels.get(0) == 4) {
@@ -45,7 +43,7 @@ public class Texture {
                         0, GL_RGBA, GL_UNSIGNED_BYTE, image);
             } else {
                 assert false : "Error: (Texture) Could not load image '" + filepath + "'";
-            }*/
+            }
 
             stbi_image_free(image);
         }
