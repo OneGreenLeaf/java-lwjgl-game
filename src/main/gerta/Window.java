@@ -1,5 +1,6 @@
 package main.gerta;
 
+import org.joml.Vector2f;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
@@ -31,10 +32,10 @@ public class Window {
     private Window() {
         this.width = 800;
         this.height = 600;
-        this.title = "Window" ;
-        r = 1;
-        b = 1;
-        g = 1;
+        this.title = "My Game" ;
+        r = 0.7f;
+        b = 0.2f;
+        g = 0.1f;
         a = 1;
     }
 
