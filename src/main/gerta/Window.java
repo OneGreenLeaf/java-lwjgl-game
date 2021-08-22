@@ -1,6 +1,5 @@
 package main.gerta;
 
-import main.until.Time;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
