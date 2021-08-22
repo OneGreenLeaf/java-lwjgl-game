@@ -58,8 +58,8 @@ public class Shader {
             assert false : "Error: Could not open file for shader: '"+ filepath +"'";
         }
 
-        System.out.println(vertexSource);
-        System.out.println(fragmentSource);
+        //System.out.println(vertexSource); // this line of code print in console all information about vertexSource in shaders/default.glsl
+        //System.out.println(fragmentSource); // this line of code print in console all information about fragmentSource in shaders/default.glsl
     }
 
     public void compile(){
@@ -178,5 +178,11 @@ public class Shader {
         int varLocation = glGetUniformLocation(shaderProgramID, varName);
         use();
         glUniform1i(varLocation, slot);
+    }
+
+    public void uploadIntArray(String varName, int[] array){
+        int varLocation = glGetUniformLocation(shaderProgramID, varName);
+        use();
+        glUniform1iv(varLocation, array);
     }
 }
