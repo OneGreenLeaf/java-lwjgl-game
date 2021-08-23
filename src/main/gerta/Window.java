@@ -33,9 +33,9 @@ public class Window {
         this.width = 800;
         this.height = 600;
         this.title = "My Game" ;
-        r = 0.7f;
-        b = 0.2f;
-        g = 0.1f;
+        r = 1;
+        b = 1;
+        g = 1;
         a = 1;
     }
 
@@ -140,6 +140,9 @@ public class Window {
           bindings available for use.
          */
         GL.createCapabilities();
+
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
         Window.changeScene(0);
     }
